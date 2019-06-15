@@ -1,56 +1,30 @@
-var Mark = {
-    
-    fullName: 'Mark Bark',
-    height: 1.92,
-    weight: 92,
-    BMI: function() {
+var john = {
+    fullName: 'John Doe',
+    height: 1.8,
+    weight: 63,
+    calcBMI: function() {
         this.BMI = this.weight / (this.height * this.height);
+        return this.BMI;
+    }
+}
+
+var mark = {
+    fullName: 'Mark Wick',
+    height: 1.9,
+    weight: 53,
+    calcBMI: function() {
+        this.BMI = this.weight / (this.height * this.height);
+        return this.BMI;
     }
 }
 
 
-var John = {
-    
-    fullName: 'John Wick',
-    height: 1.92,
-    weight: 92,
-    BMI: function() {
-        this.BMI = this.weight / (this.height * this.height);
-    }
-}
 
 
-
-if (Mark.BMI > John.BMI) {
-
-    console.log(Mark.fullName + ' ' + 'has higher BMI than ' + John.fullName + '.');
-
-} else if (Mark.BMI < John.BMI) {
-
-    console.log(John.fullName + ' ' + 'has higher BMI than ' + Mark.fullName + '.');
-
+if (john.calcBMI() > mark.calcBMI()) {
+    console.log(john.fullName + ' BMI is higher than ' + mark.fullName);
+} else if (john.BMI === mark.BMI) {
+    console.log('Both of their BMIs are the same');
 } else {
-
-    console.log('Both ' + Mark.fullName + ' ' + 'and ' + John.fullName + ' ' + 'has the same BMI.');
-
+    console.log('Mark BMI is higher');
 }
-
-
-Mark.BMI(), John.BMI();
-console.log(Mark, John);
-
-
-
-
-
-// Seperate from the challenge, just for practice.
-var array1 = ['haha', 'ahaha', 'yes', 845, 'no'];
-
-for (i = array1.length -1; i >= 0; i--) {
-    if (typeof array1[i] !== 'string') continue;
-    console.log(array1[i]);
-}
-
-
-
-
